@@ -1,0 +1,41 @@
+input {
+width: 700px;
+height: 20px;
+border: 3px solid rgb(250, 192, 0);
+
+}
+body{
+  background-color: rgb(253, 245, 200);
+}
+
+.fai01{
+    position: fixed;
+    left: 300px;
+    top: 50px;
+}
+.fai02{
+    position: fixed;
+    left: 500px;
+    top: 50px;
+}
+.fai03{
+    position: fixed;
+    left: 700px;
+    top: 50px;
+}
+.tole04{
+    position: fixed;
+    left: 950px;
+    top: 50px;
+}
+.obter{
+    position: fixed;
+    left: 680px;
+    top: 250px;
+
+}
+#total{
+    position: fixed;
+    left: 400px;
+    top: 300px;
+}

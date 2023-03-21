@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title> Calcular as faixas dos Resistores </title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body onchange="calRes()">
+  <section class="lines">
+  <form>
+  <p>
+  <div class="fai01">
+  1º Faixa: 
+    <select id="faixa01">
+      <option value="0"> Preto </option>
+      <option value="1"> Marrom </option>
+      <option value="2"> Vermelho </option>
+      <option value="3"> Laranja </option>
+      <option value="4"> Amarelo </option>
+      <option value="5"> Verde </option>
+      <option value="6"> Azul </option>
+      <option value="7"> Violeta </option>
+      <option value="8"> Cinza </option>
+      <option value="9"> Branco </option>
+    </select>
+  </div>
+</p>
+<p>
+  <div class="fai02">
+    2º Faixa:
+    <select id="faixa02">
+      <option value="0"> Preto </option>
+      <option value="1"> Marrom </option>
+      <option value="2"> Vermelho </option>
+      <option value="3"> Laranja </option>
+      <option value="4"> Amarelo </option>
+      <option value="5"> Verde </option>
+      <option value="6"> Azul </option>
+      <option value="7"> Violeta </option>
+      <option value="8"> Cinza </option>
+      <option value="9"> Branco </option>
+    </select>
+  </div>
+</p>
+<p>
+  <div class="fai03">
+    Multiplicador:
+    <select id="mult">
+      <option value="1"> Preto </option>
+      <option value="10"> Marrom </option>
+      <option value="100"> Vermelho </option>
+      <option value="1000"> Laranja </option>
+      <option value="10000"> Amarelo </option>
+      <option value="100000"> Verde </option>
+      <option value="1000000"> Azul </option>
+      <option value="10000000"> Violeta </option>
+      <option value="100000000"> Cinza </option>
+      <option value="1000000000"> Branco </option>
+    </select>
+  </div>
+  </p>
+  <p>    
+  <div class="tole04">
+    Tolerância:
+    <select id="tole">
+      <option value="0"> Nenhum </option>
+      <option value="0.10"> Prata </option>
+      <option value="0.05"> Dourado </option>
+    </select>
+  </div>
+  </p>
+  </form>
+  </section>
+  <section>
+    <div class="obter">
+    <button type="button" onclick="calRes()"> Obter resultado: </button>
+    </div>
+  </section>
+<br>
+  <div>
+    <input type="text" id="total" readonly>
+  </div>
+
+  <script>
+  function calRes(){
+  var F1 = document.getElementById("faixa01").value;
+  var F2 = document.getElementById("faixa02").value;
+  var multi = document.getElementById("mult").value;
+  var tol = document.getElementById("tole").value;
+  var soma = (F1+F2)*multi;
+  var resis = soma;
+  var dou = soma + (soma * tol);
+  var pra = soma - (soma * tol);
+  // console.log(dou);
+  // console.log(pra);
+  document.getElementById ("total").value = "A Resistência é " + resis + "Ω e a tolerância está entre " + pra + " e " + dou + ".";
+  }
+  </script>
+</body>
+</html>
